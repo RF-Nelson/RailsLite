@@ -1,5 +1,5 @@
-# [Rails Lite!][description]
+# Rails Lite
 
-## Using The Specs
 
-an MVC web framework, structured like Rails and using the same underlying libraries and tricks
+
+A MVC web framework, structured like and based on Rails -- using the same underlying techniques to help understand the "magic" abilities of Rails
