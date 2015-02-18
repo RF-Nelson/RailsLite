@@ -43,9 +43,9 @@ module Phase6
 
     # make each of these methods that
     # when called add route
-    [:get, :post, :put, :delete].each do |http_method|
-      define_method(http_method) do |pattern, controller_class, action_name|
-        add_route(pattern, http_method, controller_class, action_name)
+    [:get, :post, :put, :delete].each do |method|
+      define_method(method) do |pattern, controller, action|
+        add_route(pattern, method, controller, action)
       end
     end
 
@@ -59,7 +59,7 @@ module Phase6
       matched_route = match(req)
       matched_route.nil? ? res.status = 404 : matched_route.run(req, res)
     end
-    
+
   end
 
 end
